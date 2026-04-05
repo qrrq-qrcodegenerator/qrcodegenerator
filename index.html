@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free QR Code Generator — Create Dynamic QR Codes Online | QRRQ</title>
+    <meta name="description" content="Free QR code generator with real-time analytics, custom designs, password protection & link pages. Create dynamic QR codes for URLs, PDFs, vCards, WiFi & more.">
+    <meta name="keywords" content="qr code generator, free qr code, dynamic qr code, qr code maker, create qr code, qr code with logo, qr code analytics, qr code tracking">
+    <meta name="author" content="QRRQ">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://qrrq-qrcodegenerator.github.io/qrcodegenerator/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free QR Code Generator — Create Dynamic QR Codes Online">
+    <meta property="og:description" content="Create dynamic QR codes with real-time analytics, custom designs & link pages. 15+ QR types supported.">
+    <meta property="og:url" content="https://qrrq-qrcodegenerator.github.io/qrcodegenerator/">
+    <meta property="og:site_name" content="QRRQ QR Code Generator">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free QR Code Generator — QRRQ">
+    <meta name="twitter:description" content="Create dynamic QR codes with analytics, custom designs & link pages.">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "QRRQ QR Code Generator",
+        "url": "https://qrrq.io",
+        "description": "Free dynamic QR code generator with real-time analytics, custom designs, password protection and link pages.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Dynamic QR Codes",
+            "Real-Time Scan Analytics",
+            "Custom QR Designs with Logo",
+            "Password Protected QR Codes",
+            "Link Pages",
+            "REST API",
+            "Multi-Language Support",
+            "15+ QR Code Types"
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is a dynamic QR code?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A dynamic QR code is a QR code whose destination URL can be changed after it has been printed. Unlike static QR codes, dynamic QR codes also provide scan analytics including location, device, and time data."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is QRRQ QR code generator free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, QRRQ offers a free plan that includes 3 dynamic QR codes, unlimited static QR codes, and basic scan analytics. Premium plans start for additional features like custom designs, password protection, and API access."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What types of QR codes can I create?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "QRRQ supports 15+ QR code types including URL, PDF, vCard, WiFi, Email, Phone, SMS, WhatsApp, Location, Event, Text, Social Media, Multi-URL, App Store, and Crypto."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I track QR code scans?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, QRRQ provides real-time scan analytics including total scans, geographic location, device type, operating system, browser, and time-based analysis. Data can be exported as CSV."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I add a logo to my QR code?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, QRRQ allows you to customize your QR code with custom colors, logo upload, different patterns, eye shapes, frames, and call-to-action text."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a2e; line-height: 1.6; }
+
+        .hero {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+            color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 16px; font-weight: 800; }
+        .hero p { font-size: 1.25rem; opacity: 0.92; max-width: 640px; margin: 0 auto 32px; }
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background: #fff;
+            color: #6366f1;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.2); }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        section { padding: 72px 20px; }
+        section:nth-child(even) { background: #f8f9fc; }
+        section h2 { font-size: 2rem; text-align: center; margin-bottom: 40px; color: #1a1a2e; }
+
+        .types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .type-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: box-shadow 0.2s;
+        }
+        .type-card:hover { box-shadow: 0 4px 20px rgba(99,102,241,0.12); }
+        .type-card .icon { font-size: 2rem; margin-bottom: 8px; }
+        .type-card h3 { font-size: 1rem; color: #1a1a2e; }
+        .type-card p { font-size: 0.85rem; color: #6b7280; margin-top: 4px; }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .feature-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .feature-card h3 { font-size: 1.2rem; margin-bottom: 8px; color: #6366f1; }
+        .feature-card p { color: #4b5563; }
+
+        .comparison-table { width: 100%; max-width: 800px; margin: 0 auto; border-collapse: collapse; }
+        .comparison-table th, .comparison-table td { padding: 14px 20px; text-align: left; border-bottom: 1px solid #e5e7eb; }
+        .comparison-table th { background: #6366f1; color: #fff; font-weight: 600; }
+        .comparison-table tr:hover { background: #f3f4ff; }
+
+        .faq { max-width: 800px; margin: 0 auto; }
+        .faq details { background: #fff; border-radius: 12px; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+        .faq summary { padding: 20px 24px; font-weight: 600; cursor: pointer; font-size: 1.05rem; }
+        .faq details p { padding: 0 24px 20px; color: #4b5563; }
+
+        .cta {
+            background: linear-gradient(135deg, #6366f1, #a855f7);
+            color: #fff;
+            text-align: center;
+            padding: 64px 20px;
+        }
+        .cta h2 { font-size: 2rem; margin-bottom: 16px; }
+        .cta p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 28px; }
+
+        footer { background: #1a1a2e; color: #9ca3af; text-align: center; padding: 32px 20px; font-size: 0.9rem; }
+        footer a { color: #a5b4fc; text-decoration: none; }
+
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 1.8rem; }
+            .hero p { font-size: 1rem; }
+            .types-grid { grid-template-columns: repeat(2, 1fr); }
+            .features-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>Free QR Code Generator</h1>
+        <p>Create dynamic QR codes with real-time analytics, custom designs, password protection & link pages. 15+ QR code types supported.</p>
+        <a href="https://qrrq.io" class="btn">Create Free QR Code</a>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>15+ QR Code Types</h2>
+            <div class="types-grid">
+                <a href="https://qrrq.io/qr-types/url" class="type-card" style="text-decoration:none;color:inherit;">
+                    <div class="icon">🔗</div>
+                    <h3>URL</h3>
+                    <p>Link to any website</p>
+                </a>
+                <a href="https://qrrq.io/qr-types/pdf" class="type-card" style="text-decoration:none;color:inherit;">
+                    <div class="icon">📄</div>
+                    <h3>PDF</h3>
+                    <p>Share documents</p>
+                </a>
+                <a href="https://qrrq.io/qr-types/vcard" class="type-card" style="text-decoration:none;color:inherit;">
+                    <div class="icon">👤</div>
+                    <h3>vCard</h3>
+                    <p>Digital business card</p>
+                </a>
+                <a href="https://qrrq.io/qr-types/wifi" class="type-card" style="text-decoration:none;color:inherit;">
+                    <div class="icon">📶</div>
+                    <h3>WiFi</h3>
+                    <p>One-scan connection</p>
+                </a>
+                <a href="https://qrrq.io/qr-types/email" class="type-card" style="text-decoration:none;color:inherit;">
+                    <div class="icon">📧</div>
+                    <h3>Email</h3>
+                    <p>Pre-filled composer</p>
+                </a>
+                <a href="https://qrrq.io/qr-types/phone" class="type-card" style="text-decoration:none;color:inherit;">
+                    <div class="icon">📞</div>
+                    <h3>Phone</h3>
+                    <p>Instant dial</p>
+                </a>
+                <a href="https://qrrq.io/qr-types/sms" class="type-card" style="text-decoration:none;color:inherit;">
+                    <div class="icon">💬</div>
+                    <h3>SMS</h3>
+                    <p>Pre-written messages</p>
+                </a>
+                <a href="https://qrrq.io/qr-types/whatsapp" class="type-card" style="text-decoration:none;color:inherit;">
+                    <div class="icon">💚</div>
+                    <h3>WhatsApp</h3>
+                    <p>Direct chat link</p>
+                </a>
+                <a href="https://qrrq.io/qr-types/location" class="type-card" style="text-decoration:none;color:inherit;">
+                    <div class="icon">📍</div>
+                    <h3>Location</h3>
+                    <p>Google Maps pin</p>
+                </a>
+                <a href="https://qrrq.io/qr-types/event" class="type-card" style="text-decoration:none;color:inherit;">
+                    <div class="icon">📅</div>
+                    <h3>Event</h3>
+                    <p>Calendar event</p>
+                </a>
+                <a href="https://qrrq.io/qr-types/social" class="type-card" style="text-decoration:none;color:inherit;">
+                    <div class="icon">🌐</div>
+                    <h3>Social Media</h3>
+                    <p>All profiles in one QR</p>
+                </a>
+                <a href="https://qrrq.io/qr-types/multiurl" class="type-card" style="text-decoration:none;color:inherit;">
+                    <div class="icon">🔀</div>
+                    <h3>Multi-URL</h3>
+                    <p>Smart redirects</p>
+                </a>
+                <a href="https://qrrq.io/qr-types/app" class="type-card" style="text-decoration:none;color:inherit;">
+                    <div class="icon">📱</div>
+                    <h3>App Store</h3>
+                    <p>iOS & Android links</p>
+                </a>
+                <a href="https://qrrq.io/qr-types/crypto" class="type-card" style="text-decoration:none;color:inherit;">
+                    <div class="icon">₿</div>
+                    <h3>Crypto</h3>
+                    <p>Wallet payments</p>
+                </a>
+                <a href="https://qrrq.io/qr-types/text" class="type-card" style="text-decoration:none;color:inherit;">
+                    <div class="icon">📝</div>
+                    <h3>Text</h3>
+                    <p>Any text content</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Why Choose QRRQ?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Real-Time Analytics</h3>
+                    <p>Track every scan with location, device, browser, and time data. Export reports as CSV. Know exactly how your QR codes perform.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Custom QR Designs</h3>
+                    <p>Add your logo, choose colors, patterns, eye shapes, and frames. Make QR codes that match your brand identity.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Dynamic QR Codes</h3>
+                    <p>Change the destination URL anytime without reprinting. Set expiration dates, scan limits, and password protection.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Link Pages</h3>
+                    <p>Create beautiful micro landing pages with links, social media, videos, maps, and contact forms — all behind one QR code.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>REST API</h3>
+                    <p>Integrate QR code generation into your apps and workflows. Full CRUD operations with scan analytics endpoints.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Multi-Language</h3>
+                    <p>Available in English, Turkish, German, Spanish, and Russian. Serve your global audience in their language.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Dynamic vs Static QR Codes</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Dynamic QR Code</th>
+                        <th>Static QR Code</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Edit after print</td><td>✅ Change anytime</td><td>❌ Fixed forever</td></tr>
+                    <tr><td>Scan analytics</td><td>✅ Real-time tracking</td><td>❌ No data</td></tr>
+                    <tr><td>A/B testing</td><td>✅ Test destinations</td><td>❌ Not possible</td></tr>
+                    <tr><td>Password protection</td><td>✅ Secure access</td><td>❌ Open to all</td></tr>
+                    <tr><td>Expiration dates</td><td>✅ Set start/end</td><td>❌ Always active</td></tr>
+                    <tr><td>Scan limits</td><td>✅ Control usage</td><td>❌ Unlimited</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq">
+                <details>
+                    <summary>What is a dynamic QR code?</summary>
+                    <p>A dynamic QR code is a QR code whose destination URL can be changed after it has been printed. Unlike static QR codes, dynamic QR codes also provide scan analytics including location, device, and time data. <a href="https://qrrq.io/features">Learn more about dynamic QR codes</a>.</p>
+                </details>
+                <details>
+                    <summary>Is QRRQ QR code generator free?</summary>
+                    <p>Yes, QRRQ offers a free plan that includes 3 dynamic QR codes, unlimited static QR codes, and basic scan analytics. Premium plans are available for additional features like custom designs, password protection, and API access. <a href="https://qrrq.io/pricing">See pricing plans</a>.</p>
+                </details>
+                <details>
+                    <summary>What types of QR codes can I create?</summary>
+                    <p>QRRQ supports 15+ QR code types including URL, PDF, vCard, WiFi, Email, Phone, SMS, WhatsApp, Location, Event, Text, Social Media, Multi-URL, App Store, and Crypto. <a href="https://qrrq.io">Try it free</a>.</p>
+                </details>
+                <details>
+                    <summary>Can I track QR code scans?</summary>
+                    <p>Yes, QRRQ provides real-time scan analytics including total scans, geographic location, device type, operating system, browser, and time-based analysis. Data can be exported as CSV.</p>
+                </details>
+                <details>
+                    <summary>Can I add a logo to my QR code?</summary>
+                    <p>Yes, you can customize your QR code with custom colors, logo upload, different patterns, eye shapes, frames, and call-to-action text. Your QR codes will match your brand identity perfectly.</p>
+                </details>
+                <details>
+                    <summary>What is a Link Page?</summary>
+                    <p>A Link Page is a micro landing page you can create with QRRQ. It supports 12 block types including links, headers, social media, YouTube, Spotify, contact forms, and maps. Perfect for sharing multiple links through one QR code. <a href="https://qrrq.io/features">Explore Link Pages</a>.</p>
+                </details>
+                <details>
+                    <summary>Does QRRQ have an API?</summary>
+                    <p>Yes, QRRQ provides a full REST API for QR code creation, management, and analytics. Available on Pro and Business plans. <a href="https://qrrq.io/dashboard/api-docs">View API documentation</a>.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Use Cases</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🍽️ Restaurants</h3>
+                    <p>Digital menus, WiFi QR codes, Google review links, and table ordering systems.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🛍️ Retail & E-commerce</h3>
+                    <p>Product information, promotions, loyalty programs, and packaging authentication.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎪 Events</h3>
+                    <p>Tickets, schedules, registration forms, and attendee engagement tracking.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🏠 Real Estate</h3>
+                    <p>Property listings, virtual tours, agent contact cards, and open house sign-ups.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📚 Education</h3>
+                    <p>Course materials, attendance tracking, student resources, and campus navigation.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📈 Marketing</h3>
+                    <p>Campaign tracking, A/B testing, UTM parameters, and multi-channel attribution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Start Creating QR Codes for Free</h2>
+        <p>Join thousands of businesses using QRRQ to create, track, and manage their QR codes.</p>
+        <a href="https://qrrq.io" class="btn">Get Started Free</a>
+    </section>
+
+    <footer>
+        <p>
+            <a href="https://qrrq.io">QRRQ — Free QR Code Generator</a> &nbsp;|&nbsp;
+            <a href="https://qrrq.io/pricing">Pricing</a> &nbsp;|&nbsp;
+            <a href="https://qrrq.io/features">Features</a> &nbsp;|&nbsp;
+            <a href="https://qrrq.io/blog">Blog</a> &nbsp;|&nbsp;
+            <a href="https://qrrq.io/contact">Contact</a>
+        </p>
+        <p style="margin-top: 12px;">&copy; 2026 QRRQ. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
